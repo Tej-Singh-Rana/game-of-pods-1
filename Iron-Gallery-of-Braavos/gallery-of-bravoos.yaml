@@ -1,5 +1,5 @@
 ---
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: iron-gallery-ingress
@@ -9,7 +9,11 @@ spec:
     http:
       paths:
       - path: /
+        pathType: Prefix
         backend:
-          serviceName: iron-gallery-service
-          servicePort: 80
+          service:
+            name: iron-gallery-service
+            port: 
+             number: 80
+          
           
