@@ -10,5 +10,5 @@ kubectl config set-context developer --cluster=kubernetes --user=martin
 
 #### To set the context
 ```
-kubectl config use-context developer
+kubectl config use-context developer --user=martin --cluster=kubernetes
 ```
